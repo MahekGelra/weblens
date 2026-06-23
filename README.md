@@ -22,6 +22,7 @@ WebLens is a Chrome Extension that lets you ask questions about any webpage and 
 ---
 
 ## Architecture
+'''
 Chrome Extension (popup)
 
 │
@@ -39,7 +40,7 @@ FastAPI Backend
 ├── FAISS vector store (persisted to disk)
 
 └── LLaMA 3.2 via Ollama (local LLM)
-
+'''
 ---
 
 ## Tech Stack
@@ -97,7 +98,7 @@ uvicorn main:app --port 8000
 ---
 
 ## Project Structure
-
+'''
 weblens/
 
 ├── backend/
@@ -123,7 +124,7 @@ weblens/
 ├── content.js       # Page text extraction
 
 └── background.js    # Service worker
-
+'''
 ---
 
 ## How RAG Works Here
