@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WebLens</title>
+  <link rel="stylesheet" href="css/popup.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">🔍 WebLens</div>
+    <div class="header-actions">
+      <button id="clear-index-btn" title="Clear page index" disabled>🗂️</button>
+      <button id="clear-btn" title="Clear chat">🗑</button>
+    </div>
+  </header>
+
+  <!-- Current page title -->
+  <div class="page-info">
+    <span id="page-title">Loading...</span>
+  </div>
+
+  <!-- Status bar -->
+  <div id="status-bar" class="status idle">
+    Click 'Index Page' to get started
+  </div>
+
+<!-- Index + Summary buttons -->
+  <div class="index-row">
+    <button id="index-btn" class="btn-primary">⚡ Index Page</button>
+    <button id="summary-btn" class="btn-secondary" disabled>📄 Summarize</button>
+  </div>
+
+  <!-- Chat messages -->
+  <div id="chat-box">
+    <div class="msg system">👋 Index the page first, then ask me anything!</div>
+  </div>
+
+  <!-- Input area -->
+  <div class="input-area">
+    <textarea
+      id="query-input"
+      placeholder="Index the page first..."
+      rows="2"
+      maxlength="500"
+      disabled
+    ></textarea>
+    <div class="input-footer">
+      <span id="char-count">0 / 500</span>
+      <button id="ask-btn" class="btn-accent" disabled>Ask</button>
+    </div>
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html>
