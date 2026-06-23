@@ -21,28 +21,6 @@ WebLens is a Chrome Extension that lets you ask questions about any webpage and 
 
 ---
 
-## Architecture
-'''
-Chrome Extension (popup)
-
-│
-
-│ HTTP (localhost:8000)
-
-▼
-
-FastAPI Backend
-
-├── RecursiveCharacterTextSplitter (LangChain)
-
-├── BAAI/bge-small-en (Sentence Transformers)
-
-├── FAISS vector store (persisted to disk)
-
-└── LLaMA 3.2 via Ollama (local LLM)
-'''
----
-
 ## Tech Stack
 
 | Component | Technology |
@@ -95,36 +73,6 @@ uvicorn main:app --port 8000
 3. Click **⚡ Index Page**
 4. Ask anything!
 
----
-
-## Project Structure
-'''
-weblens/
-
-├── backend/
-
-│   ├── main.py              # FastAPI app — ingest, query, stream, clear
-
-│   ├── requirements.txt
-
-│   └── data/                # FAISS indexes saved here (git ignored)
-
-└── extension/
-
-├── manifest.json
-
-├── popup.html
-
-├── css/popup.css
-
-└── js/
-
-├── popup.js         # UI logic, streaming, chat history
-
-├── content.js       # Page text extraction
-
-└── background.js    # Service worker
-'''
 ---
 
 ## How RAG Works Here
